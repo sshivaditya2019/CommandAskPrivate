@@ -54,4 +54,4 @@ jobs:
 
       - name: Add Evals Report to Github Comment
         if: always()
-        run: echo "$(cat llm.evals.md)" >> $GITHUB_STEP_SUMMARY
+        run: echo "$(cat eval-results.md)" >> $GITHUB_STEP_SUMMARY
