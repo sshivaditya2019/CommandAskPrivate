@@ -87,7 +87,7 @@ const baseContext: Partial<Context> = {
   config: inputs.config,
   env: requiredEnvVars,
   logger,
-  octokit: new Octokit({ auth: requiredEnvVars.GITHUB_TOKEN }),
+  octokit: new Octokit({ auth: process.env.GITHUB_TOKEN }),
 };
 
 export const main = async () => {
@@ -168,7 +168,7 @@ export const main = async () => {
           openAiBaseUrl: inputs.settings.openAiBaseUrl,
         }),
     ],
-  });
+  }, {});
 
   const scores = result.summary.scores || {};
   const metrics = result.summary.metrics || {};
