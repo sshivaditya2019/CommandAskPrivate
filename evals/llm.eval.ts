@@ -20,7 +20,6 @@ const requiredEnvVars = {
   SUPABASE_URL: process.env.SUPABASE_URL as string,
   SUPABASE_KEY: process.env.SUPABASE_KEY as string,
   OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY as string,
-  GITHUB_TOKEN: process.env.GITHUB_TOKEN as string,
 };
 
 // Validate all required env vars are present
