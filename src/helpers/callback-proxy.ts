@@ -1,0 +1,28 @@
+import { issueCommentCreatedCallback } from "../handlers/comment-created-callback";
+import { Context, SupportedEvents } from "../types";
+import { CallbackResult, ProxyCallbacks } from "../types/proxy";
+import { bubbleUpErrorComment } from "./errors";
+
+/**
+ * The `callbacks` object defines an array of callback functions for each supported event type.
+ *
+ * Since multiple callbacks might need to be executed for a single event, we store each
+ * callback in an array. This design allows for extensibility and flexibility, enabling
+ * us to add more callbacks for a particular event without modifying the core logic.
+ */
+const callbacks = {
+  "issue_comment.created": [issueCommentCreatedCallback],
+} as ProxyCallbacks;
+
+export async function callCallbacks(context: Context, eventName: SupportedEvents): Promise<CallbackResult> {
+  if (!callbacks[eventName]) {
+    context.logger.info(`No callbacks found for event ${eventName}`);
+    return { status: 204, reason: "skipped" };
+  }
+
+  try {
+    return (await Promise.all(callbacks[eventName].map((callback) => callback(context))))[0];
+  } catch (er) {
+    return { status: 500, reason: (await bubbleUpErrorComment(context, er)).logMessage.raw };
+  }
+}
