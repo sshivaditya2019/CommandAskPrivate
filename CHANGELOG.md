@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.0 (2024-12-13)
+
+
+### Bug Fixes
+
+* base commit ([770e2aa](https://github.com/sshivaditya2019/CommandAskPrivate/commit/770e2aa95a8a151110f882988e85b97c133d11ce))
+* base commit ([0730d05](https://github.com/sshivaditya2019/CommandAskPrivate/commit/0730d05542e7947ece52e0a3e5372801256bb3e5))
+* base commit ([6c1a020](https://github.com/sshivaditya2019/CommandAskPrivate/commit/6c1a020190e3ff170da219e9373fff8789601c9d))
+* base commit ([c9e6d03](https://github.com/sshivaditya2019/CommandAskPrivate/commit/c9e6d0387e034312426cb7f36272e87faaf4502d))
+* base commit ([ef7d077](https://github.com/sshivaditya2019/CommandAskPrivate/commit/ef7d077f2503496ad212929da75eee57d4135c59))
+* base commit ([e4011b1](https://github.com/sshivaditya2019/CommandAskPrivate/commit/e4011b128d6ea7fcbaad25066e8789f55dfa5305))
+* base commit ([4e78151](https://github.com/sshivaditya2019/CommandAskPrivate/commit/4e78151e7bb0fa772b1aedac67145280039ae911))
+* change to /ask ([99109f1](https://github.com/sshivaditya2019/CommandAskPrivate/commit/99109f11e0263ea3a74029f11f059aa6cf304c02))
+
 ## 1.0.0 (2024-11-29)
 
 
